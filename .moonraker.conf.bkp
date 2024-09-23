@@ -2,6 +2,7 @@
 host = 0.0.0.0
 port = 7125
 max_upload_size = 1024
+klippy_uds_address = /home/lemonxah/printer_data/comms/klippy.sock
 
 [file_manager]
 enable_object_processing = False
@@ -36,24 +37,11 @@ channel = stable
 repo = mainsail-crew/mainsail
 path = ~/mainsail
 
-[update_manager crowsnest]
-type = git_repo
-path = ~/crowsnest
-origin = https://github.com/mainsail-crew/crowsnest.git
-managed_services = crowsnest
-
-[update_manager sonar]
-type = git_repo
-path = ~/sonar
-origin = https://github.com/mainsail-crew/sonar.git
-primary_branch = main
-managed_services = sonar
-
 [update_manager KlipperScreen]
 type = git_repo
-path = /home/pi/KlipperScreen
-origin = https://github.com/jordanruthe/KlipperScreen.git
-env = /home/pi/.KlipperScreen-env/bin/python
+path = ~/KlipperScreen
+origin = https://github.com/KlipperScreen/KlipperScreen.git
+env = ~/.KlipperScreen-env/bin/python
 requirements = scripts/KlipperScreen-requirements.txt
 install_script = scripts/KlipperScreen-install.sh
 
